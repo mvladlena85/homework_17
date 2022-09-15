@@ -139,7 +139,7 @@ class DirectorView(Resource):
 class GenresView(Resource):
     def get(self):
         genres = Genre.query.all()
-        return genre_schema.dump(genres)
+        return genres_schema.dump(genres)
 
     def post(self):
         genre = request.json
